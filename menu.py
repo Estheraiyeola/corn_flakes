@@ -1,23 +1,3 @@
-print(f'''
-================================
-    Menu Options
-===============================
-1. Phone book
-2. Messages
-3. Chat
-4. Call register
-5. Tones
-6. Settings
-7. Call divert
-8. Games
-9. Calculator
-10. Reminders
-11. Clock
-12. Profiles
-13. SIM services
-''')
-userOption = input('Pick a number to proceed: ')
-
 
 def main_menu():
     print(f'''
@@ -67,20 +47,26 @@ def main_menu():
         sim_services()
     else:
         print('Invalid option.')
+        main_menu()
 
 
-def search():
-    print(f'''
-    ==================================
-                Search
-    ==================================
-    1. Back
-''')
+def phone_book_function():
     user_option = input('Pick a number to proceed: ')
     if user_option == '1':
         phone_book()
     else:
         print('Invalid option.')
+        phone_book_function()
+
+
+def search():
+    print(f'''
+            ==================================
+                        Search
+            ==================================
+            1. Back
+        ''')
+    phone_book_function()
 
 
 def service_nos():
@@ -90,11 +76,7 @@ def service_nos():
         ==================================
         1. Back
     ''')
-    user_option = input('Pick a number to proceed: ')
-    if user_option == '1':
-        phone_book()
-    else:
-        print('Invalid option.')
+    phone_book_function()
 
 
 def add_name():
@@ -104,11 +86,7 @@ def add_name():
         ==================================
         1. Back
     ''')
-    user_option = input('Pick a number to proceed: ')
-    if user_option == '1':
-        phone_book()
-    else:
-        print('Invalid option.')
+    phone_book_function()
 
 
 def erase():
@@ -118,11 +96,7 @@ def erase():
         ==================================
         1. Back
     ''')
-    user_option = input('Pick a number to proceed: ')
-    if user_option == '1':
-        phone_book()
-    else:
-        print('Invalid option.')
+    phone_book_function()
 
 
 def edit():
@@ -132,11 +106,7 @@ def edit():
         ==================================
         1. Back
     ''')
-    user_option = input('Pick a number to proceed: ')
-    if user_option == '1':
-        phone_book()
-    else:
-        print('Invalid option.')
+    phone_book_function()
 
 
 def assign_tone():
@@ -146,11 +116,7 @@ def assign_tone():
         ==================================
         1. Back
     ''')
-    user_option = input('Pick a number to proceed: ')
-    if user_option == '1':
-        phone_book()
-    else:
-        print('Invalid option.')
+    phone_book_function()
 
 
 def send_bcard():
@@ -160,11 +126,16 @@ def send_bcard():
         ==================================
         1. Back
     ''')
+    phone_book_function()
+
+
+def option_function():
     user_option = input('Pick a number to proceed: ')
     if user_option == '1':
-        phone_book()
+        options()
     else:
         print('Invalid option.')
+        option_function()
 
 
 def type_of_view():
@@ -174,11 +145,7 @@ def type_of_view():
         ==================================
         1. Back
     ''')
-    user_option = input('Pick a number to proceed: ')
-    if user_option == '1':
-        options()
-    else:
-        print('Invalid option.')
+    option_function()
 
 
 def memory_status():
@@ -188,11 +155,7 @@ def memory_status():
         ==================================
         1. Back
     ''')
-    user_option = input('Pick a number to proceed: ')
-    if user_option == '1':
-        options()
-    else:
-        print('Invalid option.')
+    option_function()
 
 
 def options():
@@ -213,6 +176,7 @@ def options():
         phone_book()
     else:
         print('Invalid option.')
+        options()
 
 
 def speed_dials():
@@ -222,11 +186,7 @@ def speed_dials():
         ==================================
         1. Back
     ''')
-    user_option = input('Pick a number to proceed: ')
-    if user_option == '1':
-        phone_book()
-    else:
-        print('Invalid option.')
+    phone_book_function()
 
 
 def voice_tags():
@@ -236,11 +196,7 @@ def voice_tags():
         ==================================
         1. Back
     ''')
-    user_option = input('Pick a number to proceed: ')
-    if user_option == '1':
-        phone_book()
-    else:
-        print('Invalid option.')
+    phone_book_function()
 
 
 def phone_book():
@@ -283,6 +239,18 @@ def phone_book():
         voice_tags()
     elif user_option == '11':
         main_menu()
+    else:
+        print('Invalid input')
+        phone_book()
+
+
+def messages_function():
+    user_option = input('Pick a number to proceed: ')
+    if user_option == '1':
+        messages()
+    else:
+        print('Invalid option.')
+        messages_function()
 
 
 def write_messages():
@@ -292,11 +260,7 @@ def write_messages():
         ==================================
         1. Back
     ''')
-    user_option = input('Pick a number to proceed: ')
-    if user_option == '1':
-        messages()
-    else:
-        print('Invalid option.')
+    messages_function()
 
 
 def inbox():
@@ -306,11 +270,7 @@ def inbox():
             ==================================
             1. Back
         ''')
-    user_option = input('Pick a number to proceed: ')
-    if user_option == '1':
-        messages()
-    else:
-        print('Invalid option.')
+    messages_function()
 
 
 def outbox():
@@ -320,11 +280,7 @@ def outbox():
             ==================================
             1. Back
         ''')
-    user_option = input('Pick a number to proceed: ')
-    if user_option == '1':
-        messages()
-    else:
-        print('Invalid option.')
+    messages_function()
 
 
 def picture_messages():
@@ -334,11 +290,7 @@ def picture_messages():
             ==================================
             1. Back
         ''')
-    user_option = input('Pick a number to proceed: ')
-    if user_option == '1':
-        messages()
-    else:
-        print('Invalid option.')
+    messages_function()
 
 
 def templates():
@@ -348,11 +300,7 @@ def templates():
             ==================================
             1. Back
         ''')
-    user_option = input('Pick a number to proceed: ')
-    if user_option == '1':
-        messages()
-    else:
-        print('Invalid option.')
+    messages_function()
 
 
 def smileys():
@@ -362,11 +310,16 @@ def smileys():
             ==================================
             1. Back
         ''')
+    messages_function()
+
+
+def set_function():
     user_option = input('Pick a number to proceed: ')
     if user_option == '1':
-        messages()
+        set_()
     else:
         print('Invalid option.')
+        set_function()
 
 
 def message_centre_number():
@@ -376,11 +329,7 @@ def message_centre_number():
             ==================================
             1. Back
         ''')
-    user_option = input('Pick a number to proceed: ')
-    if user_option == '1':
-        set_()
-    else:
-        print('Invalid option.')
+    set_function()
 
 
 def message_sent_as():
@@ -390,11 +339,7 @@ def message_sent_as():
                 ==================================
                 1. Back
             ''')
-    user_option = input('Pick a number to proceed: ')
-    if user_option == '1':
-        set_()
-    else:
-        print('Invalid option.')
+    set_function()
 
 
 def message_validity():
@@ -404,11 +349,7 @@ def message_validity():
                 ==================================
                 1. Back
             ''')
-    user_option = input('Pick a number to proceed: ')
-    if user_option == '1':
-        set_()
-    else:
-        print('Invalid option.')
+    set_function()
 
 
 def set_():
@@ -432,6 +373,16 @@ def set_():
         message_settings()
     else:
         print('Invalid option.')
+        set_()
+
+
+def common_function():
+    user_option = input('Pick a number to proceed: ')
+    if user_option == '1':
+        common()
+    else:
+        print('Invalid option.')
+        common_function()
 
 
 def delivery_reports():
@@ -441,11 +392,7 @@ def delivery_reports():
                 ==================================
                 1. Back
             ''')
-    user_option = input('Pick a number to proceed: ')
-    if user_option == '1':
-        common()
-    else:
-        print('Invalid option.')
+    common_function()
 
 
 def reply_via_same_centre():
@@ -455,11 +402,7 @@ def reply_via_same_centre():
                     ==================================
                     1. Back
                 ''')
-    user_option = input('Pick a number to proceed: ')
-    if user_option == '1':
-        common()
-    else:
-        print('Invalid option.')
+    common_function()
 
 
 def character_support():
@@ -469,11 +412,7 @@ def character_support():
                     ==================================
                     1. Back
                 ''')
-    user_option = input('Pick a number to proceed: ')
-    if user_option == '1':
-        common()
-    else:
-        print('Invalid option.')
+    common_function()
 
 
 def common():
@@ -497,6 +436,7 @@ def common():
         set_()
     else:
         print('Invalid option.')
+        common()
 
 
 def message_settings():
@@ -517,6 +457,7 @@ def message_settings():
         messages()
     else:
         print('Invalid option.')
+        message_settings()
 
 
 def info_service():
@@ -526,11 +467,7 @@ def info_service():
             ==================================
             1. Back
         ''')
-    user_option = input('Pick a number to proceed: ')
-    if user_option == '1':
-        messages()
-    else:
-        print('Invalid option.')
+    messages_function()
 
 
 def voice_mailbox_number():
@@ -540,11 +477,7 @@ def voice_mailbox_number():
             ==================================
             1. Back
         ''')
-    user_option = input('Pick a number to proceed: ')
-    if user_option == '1':
-        messages()
-    else:
-        print('Invalid option.')
+    messages_function()
 
 
 def service_command_editor():
@@ -554,11 +487,7 @@ def service_command_editor():
             ==================================
             1. Back
         ''')
-    user_option = input('Pick a number to proceed: ')
-    if user_option == '1':
-        messages()
-    else:
-        print('Invalid option.')
+    messages_function()
 
 
 def messages():
@@ -603,6 +532,16 @@ def messages():
         main_menu()
     else:
         print('Invalid option.')
+        messages()
+
+
+def main_menu_function():
+    user_option = input('Pick a number to proceed: ')
+    if user_option == '1':
+        main_menu()
+    else:
+        print('Invalid option.')
+        main_menu_function()
 
 
 def chat():
@@ -612,11 +551,16 @@ def chat():
         ==================================
         1. Back
     ''')
+    main_menu_function()
+
+
+def call_register_function():
     user_option = input('Pick a number to proceed: ')
     if user_option == '1':
-        main_menu()
+        call_register()
     else:
         print('Invalid option.')
+        call_register_function()
 
 
 def missed_calls():
@@ -626,11 +570,7 @@ def missed_calls():
         ==================================
         1. Back
     ''')
-    user_option = input('Pick a number to proceed: ')
-    if user_option == '1':
-        call_register()
-    else:
-        print('Invalid option.')
+    call_register_function()
 
 
 def received_calls():
@@ -640,11 +580,7 @@ def received_calls():
             ==================================
             1. Back
         ''')
-    user_option = input('Pick a number to proceed: ')
-    if user_option == '1':
-        call_register()
-    else:
-        print('Invalid option.')
+    call_register_function()
 
 
 def dialled_numbers():
@@ -654,11 +590,7 @@ def dialled_numbers():
             ==================================
             1. Back
         ''')
-    user_option = input('Pick a number to proceed: ')
-    if user_option == '1':
-        call_register()
-    else:
-        print('Invalid option.')
+    call_register_function()
 
 
 def erase_recent_call_lists():
@@ -668,11 +600,16 @@ def erase_recent_call_lists():
             ==================================
             1. Back
         ''')
+    call_register_function()
+
+
+def show_call_duration_function():
     user_option = input('Pick a number to proceed: ')
     if user_option == '1':
-        call_register()
+        show_call_duration()
     else:
         print('Invalid option.')
+        show_call_duration_function()
 
 
 def last_call_duration():
@@ -682,11 +619,7 @@ def last_call_duration():
                 ==================================
                 1. Back
             ''')
-    user_option = input('Pick a number to proceed: ')
-    if user_option == '1':
-        show_call_duration()
-    else:
-        print('Invalid option.')
+    show_call_duration_function()
 
 
 def all_calls_duration():
@@ -696,11 +629,7 @@ def all_calls_duration():
                 ==================================
                 1. Back
             ''')
-    user_option = input('Pick a number to proceed: ')
-    if user_option == '1':
-        show_call_duration()
-    else:
-        print('Invalid option.')
+    show_call_duration_function()
 
 
 def received_calls_duration():
@@ -710,11 +639,7 @@ def received_calls_duration():
                 ==================================
                 1. Back
             ''')
-    user_option = input('Pick a number to proceed: ')
-    if user_option == '1':
-        show_call_duration()
-    else:
-        print('Invalid option.')
+    show_call_duration_function()
 
 
 def dialled_calls_duration():
@@ -724,11 +649,7 @@ def dialled_calls_duration():
                 ==================================
                 1. Back
             ''')
-    user_option = input('Pick a number to proceed: ')
-    if user_option == '1':
-        show_call_duration()
-    else:
-        print('Invalid option.')
+    show_call_duration_function()
 
 
 def clear_timers():
@@ -738,11 +659,7 @@ def clear_timers():
                 ==================================
                 1. Back
             ''')
-    user_option = input('Pick a number to proceed: ')
-    if user_option == '1':
-        show_call_duration()
-    else:
-        print('Invalid option.')
+    show_call_duration_function()
 
 
 def show_call_duration():
@@ -772,6 +689,16 @@ def show_call_duration():
         call_register()
     else:
         print('Invalid option.')
+        show_call_duration()
+
+
+def show_call_costs_function():
+    user_option = input('Pick a number to proceed: ')
+    if user_option == '1':
+        show_call_costs()
+    else:
+        print('Invalid option.')
+        show_call_costs_function()
 
 
 def last_call_cost():
@@ -781,11 +708,7 @@ def last_call_cost():
             ==================================
             1. Back
         ''')
-    user_option = input('Pick a number to proceed: ')
-    if user_option == '1':
-        show_call_costs()
-    else:
-        print('Invalid option.')
+    show_call_costs_function()
 
 
 def all_calls_cost():
@@ -795,11 +718,7 @@ def all_calls_cost():
             ==================================
             1. Back
         ''')
-    user_option = input('Pick a number to proceed: ')
-    if user_option == '1':
-        show_call_costs()
-    else:
-        print('Invalid option.')
+    show_call_costs_function()
 
 
 def clear_counters():
@@ -809,11 +728,7 @@ def clear_counters():
             ==================================
             1. Back
         ''')
-    user_option = input('Pick a number to proceed: ')
-    if user_option == '1':
-        show_call_costs()
-    else:
-        print('Invalid option.')
+    show_call_costs_function()
 
 
 def show_call_costs():
@@ -837,6 +752,16 @@ def show_call_costs():
         call_register()
     else:
         print('Invalid option.')
+        show_call_costs()
+
+
+def call_cost_settings_function():
+    user_option = input('Pick a number to proceed: ')
+    if user_option == '1':
+        call_cost_settings()
+    else:
+        print('Invalid option.')
+        call_cost_settings_function()
 
 
 def call_cost_limit():
@@ -846,11 +771,7 @@ def call_cost_limit():
             ==================================
             1. Back
         ''')
-    user_option = input('Pick a number to proceed: ')
-    if user_option == '1':
-        call_cost_settings()
-    else:
-        print('Invalid option.')
+    call_cost_settings_function()
 
 
 def show_costs_in():
@@ -860,11 +781,7 @@ def show_costs_in():
             ==================================
             1. Back
         ''')
-    user_option = input('Pick a number to proceed: ')
-    if user_option == '1':
-        call_cost_settings()
-    else:
-        print('Invalid option.')
+    call_cost_settings_function()
 
 
 def call_cost_settings():
@@ -885,6 +802,7 @@ def call_cost_settings():
         show_call_costs()
     else:
         print('Invalid option.')
+        call_cost_settings()
 
 
 def prepaid_credit():
@@ -894,11 +812,7 @@ def prepaid_credit():
             ==================================
             1. Back
         ''')
-    user_option = input('Pick a number to proceed: ')
-    if user_option == '1':
-        call_register()
-    else:
-        print('Invalid option.')
+    call_register_function()
 
 
 def call_register():
@@ -937,6 +851,16 @@ def call_register():
         main_menu()
     else:
         print('Invalid option.')
+        call_register()
+
+
+def tones_function():
+    user_option = input('Pick a number to proceed: ')
+    if user_option == '1':
+        tones()
+    else:
+        print('Invalid option.')
+        tones_function()
 
 
 def ringing_tone():
@@ -946,11 +870,7 @@ def ringing_tone():
         ==================================
         1. Back
     ''')
-    user_option = input('Pick a number to proceed: ')
-    if user_option == '1':
-        tones()
-    else:
-        print('Invalid option.')
+    tones_function()
 
 
 def ringing_volume():
@@ -960,11 +880,7 @@ def ringing_volume():
         ==================================
         1. Back
     ''')
-    user_option = input('Pick a number to proceed: ')
-    if user_option == '1':
-        tones()
-    else:
-        print('Invalid option.')
+    tones_function()
 
 
 def incoming_call_alert():
@@ -974,11 +890,7 @@ def incoming_call_alert():
             ==================================
             1. Back
         ''')
-    user_option = input('Pick a number to proceed: ')
-    if user_option == '1':
-        tones()
-    else:
-        print('Invalid option.')
+    tones_function()
 
 
 def composer():
@@ -988,11 +900,7 @@ def composer():
         ==================================
         1. Back
     ''')
-    user_option = input('Pick a number to proceed: ')
-    if user_option == '1':
-        tones()
-    else:
-        print('Invalid option.')
+    tones_function()
 
 
 def message_alert_tone():
@@ -1002,11 +910,7 @@ def message_alert_tone():
         ==================================
         1. Back
     ''')
-    user_option = input('Pick a number to proceed: ')
-    if user_option == '1':
-        tones()
-    else:
-        print('Invalid option.')
+    tones_function()
 
 
 def keypad_tones():
@@ -1016,11 +920,7 @@ def keypad_tones():
         ==================================
         1. Back
     ''')
-    user_option = input('Pick a number to proceed: ')
-    if user_option == '1':
-        tones()
-    else:
-        print('Invalid option.')
+    tones_function()
 
 
 def warning_and_game_tones():
@@ -1030,11 +930,7 @@ def warning_and_game_tones():
         ==================================
         1. Back
     ''')
-    user_option = input('Pick a number to proceed: ')
-    if user_option == '1':
-        tones()
-    else:
-        print('Invalid option.')
+    tones_function()
 
 
 def vibrating_alert():
@@ -1044,11 +940,7 @@ def vibrating_alert():
         ==================================
         1. Back
     ''')
-    user_option = input('Pick a number to proceed: ')
-    if user_option == '1':
-        tones()
-    else:
-        print('Invalid option.')
+    tones_function()
 
 
 def screen_saver():
@@ -1058,11 +950,7 @@ def screen_saver():
         ==================================
         1. Back
     ''')
-    user_option = input('Pick a number to proceed: ')
-    if user_option == '1':
-        tones()
-    else:
-        print('Invalid option.')
+    tones_function()
 
 
 def tones():
@@ -1104,6 +992,16 @@ def tones():
         main_menu()
     else:
         print('Invalid option.')
+        tones()
+
+
+def call_settings_function():
+    user_option = input('Pick a number to proceed: ')
+    if user_option == '1':
+        call_settings()
+    else:
+        print('Invalid option.')
+        call_settings_function()
 
 
 def automatic_redial():
@@ -1113,11 +1011,7 @@ def automatic_redial():
             ==================================
             1. Back
         ''')
-    user_option = input('Pick a number to proceed: ')
-    if user_option == '1':
-        call_settings()
-    else:
-        print('Invalid option.')
+    call_settings_function()
 
 
 def speed_dialling():
@@ -1127,11 +1021,7 @@ def speed_dialling():
             ==================================
             1. Back
         ''')
-    user_option = input('Pick a number to proceed: ')
-    if user_option == '1':
-        call_settings()
-    else:
-        print('Invalid option.')
+    call_settings_function()
 
 
 def call_waiting_options():
@@ -1141,11 +1031,7 @@ def call_waiting_options():
             ==================================
             1. Back
         ''')
-    user_option = input('Pick a number to proceed: ')
-    if user_option == '1':
-        call_settings()
-    else:
-        print('Invalid option.')
+    call_settings_function()
 
 
 def own_number_sending():
@@ -1155,11 +1041,7 @@ def own_number_sending():
             ==================================
             1. Back
         ''')
-    user_option = input('Pick a number to proceed: ')
-    if user_option == '1':
-        call_settings()
-    else:
-        print('Invalid option.')
+    call_settings_function()
 
 
 def phone_line_in_use():
@@ -1169,11 +1051,7 @@ def phone_line_in_use():
             ==================================
             1. Back
         ''')
-    user_option = input('Pick a number to proceed: ')
-    if user_option == '1':
-        call_settings()
-    else:
-        print('Invalid option.')
+    call_settings_function()
 
 
 def automatic_answer():
@@ -1183,11 +1061,7 @@ def automatic_answer():
             ==================================
             1. Back
         ''')
-    user_option = input('Pick a number to proceed: ')
-    if user_option == '1':
-        call_settings()
-    else:
-        print('Invalid option.')
+    call_settings_function()
 
 
 def call_settings():
@@ -1220,6 +1094,16 @@ def call_settings():
         settings()
     else:
         print('Invalid option.')
+        call_settings()
+
+
+def phone_settings_function():
+    user_option = input('Pick a number to proceed: ')
+    if user_option == '1':
+        phone_settings()
+    else:
+        print('Invalid option.')
+        phone_settings_function()
 
 
 def language():
@@ -1229,11 +1113,7 @@ def language():
             ==================================
             1. Back
         ''')
-    user_option = input('Pick a number to proceed: ')
-    if user_option == '1':
-        phone_settings()
-    else:
-        print('Invalid option.')
+    phone_settings_function()
 
 
 def cell_info_display():
@@ -1243,11 +1123,7 @@ def cell_info_display():
             ==================================
             1. Back
         ''')
-    user_option = input('Pick a number to proceed: ')
-    if user_option == '1':
-        phone_settings()
-    else:
-        print('Invalid option.')
+    phone_settings_function()
 
 
 def welcome_note():
@@ -1257,11 +1133,7 @@ def welcome_note():
             ==================================
             1. Back
         ''')
-    user_option = input('Pick a number to proceed: ')
-    if user_option == '1':
-        phone_settings()
-    else:
-        print('Invalid option.')
+    phone_settings_function()
 
 
 def network_selection():
@@ -1271,11 +1143,7 @@ def network_selection():
             ==================================
             1. Back
             ''')
-    user_option = input('Pick a number to proceed: ')
-    if user_option == '1':
-        phone_settings()
-    else:
-        print('Invalid option.')
+    phone_settings_function()
 
 
 def lights():
@@ -1285,11 +1153,7 @@ def lights():
             ==================================
             1. Back
         ''')
-    user_option = input('Pick a number to proceed: ')
-    if user_option == '1':
-        phone_settings()
-    else:
-        print('Invalid option.')
+    phone_settings_function()
 
 
 def confirm_sim_service_access():
@@ -1299,11 +1163,7 @@ def confirm_sim_service_access():
             ==================================
             1. Back
         ''')
-    user_option = input('Pick a number to proceed: ')
-    if user_option == '1':
-        phone_settings()
-    else:
-        print('Invalid option.')
+    phone_settings_function()
 
 
 def phone_settings():
@@ -1336,6 +1196,16 @@ def phone_settings():
         phone_settings()
     else:
         print('Invalid option.')
+        phone_settings()
+
+
+def security_settings_function():
+    user_option = input('Pick a number to proceed: ')
+    if user_option == '1':
+        security_settings()
+    else:
+        print('Invalid option.')
+        security_settings_function()
 
 
 def pin_code_request():
@@ -1345,11 +1215,7 @@ def pin_code_request():
             ==================================
             1. Back
         ''')
-    user_option = input('Pick a number to proceed: ')
-    if user_option == '1':
-        security_settings()
-    else:
-        print('Invalid option.')
+    security_settings_function()
 
 
 def call_barring_service():
@@ -1359,11 +1225,7 @@ def call_barring_service():
             ==================================
             1. Back
         ''')
-    user_option = input('Pick a number to proceed: ')
-    if user_option == '1':
-        security_settings()
-    else:
-        print('Invalid option.')
+    security_settings_function()
 
 
 def fixed_dialling():
@@ -1373,11 +1235,7 @@ def fixed_dialling():
             ==================================
             1. Back
         ''')
-    user_option = input('Pick a number to proceed: ')
-    if user_option == '1':
-        security_settings()
-    else:
-        print('Invalid option.')
+    security_settings_function()
 
 
 def closed_user_group():
@@ -1387,11 +1245,7 @@ def closed_user_group():
             ==================================
             1. Back
         ''')
-    user_option = input('Pick a number to proceed: ')
-    if user_option == '1':
-        security_settings()
-    else:
-        print('Invalid option.')
+    security_settings_function()
 
 
 def phone_security():
@@ -1401,11 +1255,7 @@ def phone_security():
             ==================================
             1. Back
         ''')
-    user_option = input('Pick a number to proceed: ')
-    if user_option == '1':
-        security_settings()
-    else:
-        print('Invalid option.')
+    security_settings_function()
 
 
 def change_access_code():
@@ -1415,11 +1265,7 @@ def change_access_code():
         ==================================
         1. Back
     ''')
-    user_option = input('Pick a number to proceed: ')
-    if user_option == '1':
-        security_settings()
-    else:
-        print('Invalid option.')
+    security_settings_function()
 
 
 def security_settings():
@@ -1452,6 +1298,16 @@ def security_settings():
         settings()
     else:
         print('Invalid option.')
+        security_settings()
+
+
+def settings_function():
+    user_option = input('Pick a number to proceed: ')
+    if user_option == '1':
+        settings()
+    else:
+        print('Invalid option.')
+        settings_function()
 
 
 def restore_factory_settings():
@@ -1461,11 +1317,7 @@ def restore_factory_settings():
             ==================================
             1. Back
         ''')
-    user_option = input('Pick a number to proceed: ')
-    if user_option == '1':
-        settings()
-    else:
-        print('Invalid option.')
+    settings_function()
 
 
 def settings():
@@ -1492,6 +1344,7 @@ def settings():
         main_menu()
     else:
         print('Invalid option.')
+        settings()
 
 
 def call_divert():
@@ -1501,11 +1354,7 @@ def call_divert():
         ==================================
         1. Back
     ''')
-    user_option = input('Pick a number to proceed: ')
-    if user_option == '1':
-        main_menu()
-    else:
-        print('Invalid option.')
+    main_menu_function()
 
 
 def games():
@@ -1515,11 +1364,7 @@ def games():
         ==================================
         1. Back
     ''')
-    user_option = input('Pick a number to proceed: ')
-    if user_option == '1':
-        main_menu()
-    else:
-        print('Invalid option.')
+    main_menu_function()
 
 
 def calculator():
@@ -1527,13 +1372,24 @@ def calculator():
         ==================================
                     Calculator
         ==================================
-        1. Back
+        1. input your number>>>>>>
+        2. Back
     ''')
-    user_option = input('Pick a number to proceed: ')
-    if user_option == '1':
+    user_option = input("Pick a number? ")
+    if user_option == "1":
+        print(calculate())
+    elif user_option == "2":
         main_menu()
     else:
-        print('Invalid option.')
+        print('Invalid input')
+        calculator()
+
+
+def calculate():
+    expression = input("")
+    total = eval(expression)
+    print(total)
+    return calculator()
 
 
 def reminders():
@@ -1543,11 +1399,16 @@ def reminders():
         ==================================
         1. Back
     ''')
+    main_menu_function()
+
+
+def clock_function():
     user_option = input('Pick a number to proceed: ')
     if user_option == '1':
-        main_menu()
+        clock()
     else:
         print('Invalid option.')
+        clock_function()
 
 
 def alarm_clock():
@@ -1557,11 +1418,7 @@ def alarm_clock():
         ==================================
         1. Back
     ''')
-    user_option = input('Pick a number to proceed: ')
-    if user_option == '1':
-        clock()
-    else:
-        print('Invalid option.')
+    clock_function()
 
 
 def clock_settings():
@@ -1571,11 +1428,7 @@ def clock_settings():
         ==================================
         1. Back
     ''')
-    user_option = input('Pick a number to proceed: ')
-    if user_option == '1':
-        clock()
-    else:
-        print('Invalid option.')
+    clock_function()
 
 
 def date_settings():
@@ -1585,11 +1438,7 @@ def date_settings():
         ==================================
         1. Back
     ''')
-    user_option = input('Pick a number to proceed: ')
-    if user_option == '1':
-        clock()
-    else:
-        print('Invalid option.')
+    clock_function()
 
 
 def stopwatch():
@@ -1599,11 +1448,7 @@ def stopwatch():
         ==================================
         1. Back
     ''')
-    user_option = input('Pick a number to proceed: ')
-    if user_option == '1':
-        clock()
-    else:
-        print('Invalid option.')
+    clock_function()
 
 
 def countdown_timer():
@@ -1613,11 +1458,7 @@ def countdown_timer():
         ==================================
         1. Back
     ''')
-    user_option = input('Pick a number to proceed: ')
-    if user_option == '1':
-        clock()
-    else:
-        print('Invalid option.')
+    clock_function()
 
 
 def auto_update_of_date_and_time():
@@ -1627,11 +1468,7 @@ def auto_update_of_date_and_time():
         ==================================
         1. Back
     ''')
-    user_option = input('Pick a number to proceed: ')
-    if user_option == '1':
-        clock()
-    else:
-        print('Invalid option.')
+    clock_function()
 
 
 def clock():
@@ -1664,6 +1501,7 @@ def clock():
         main_menu()
     else:
         print('Invalid option.')
+        clock()
 
 
 def profiles():
@@ -1673,11 +1511,7 @@ def profiles():
         ==================================
         1. Back
     ''')
-    user_option = input('Pick a number to proceed: ')
-    if user_option == '1':
-        main_menu()
-    else:
-        print('Invalid option.')
+    main_menu_function()
 
 
 def sim_services():
@@ -1687,38 +1521,7 @@ def sim_services():
             ==================================
             1. Back
         ''')
-    user_option = input('Pick a number to proceed: ')
-    if user_option == '1':
-        main_menu()
-    else:
-        print('Invalid option.')
+    main_menu_function()
 
 
-if userOption == '1':
-    phone_book()
-elif userOption == '2':
-    messages()
-elif userOption == '3':
-    chat()
-elif userOption == '4':
-    call_register()
-elif userOption == '5':
-    tones()
-elif userOption == '6':
-    settings()
-elif userOption == '7':
-    call_divert()
-elif userOption == '8':
-    games()
-elif userOption == '9':
-    calculator()
-elif userOption == '10':
-    reminders()
-elif userOption == '11':
-    clock()
-elif userOption == '12':
-    profiles()
-elif userOption == '13':
-    sim_services()
-else:
-    print('Invalid option.')
+main_menu()
