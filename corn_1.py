@@ -12,9 +12,8 @@ if class_ == required_class:
     average_no = float(total) / counter
 
     print('*' * 70)
-    print('      Aso Rock Secondary School, Abuja Nigeria      ')
+    print('\t\tAso Rock Secondary School, Abuja Nigeria')
     print('*' * 70)
-    print('Class: SS3')
-    print('Number of Students: ', counter)
-    print('Total score: ', total)
-    print('Average score: ', average_no)
+    print('Class: ', class_, '\nNumber of Students: ', counter, '\nTotal score: ', total, '\nAverage score: ',
+          average_no)
+    print('*' * 70)
